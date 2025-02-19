@@ -31,7 +31,7 @@ router.get("/:id", async (req, res) => {
 });
 
 // 商品追加
-router.post("/new", async (req, res) => {
+router.post("/", async (req, res) => {
   const { name, sku, stock, category } = req.body;
   if (!name || !sku || stock === undefined || !category) {
     return res.status(400).json({ message: "Missing required fields" });
